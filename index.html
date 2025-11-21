@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Joe</title>
+
+  <!-- Apple-like font (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #ffffff;
+      --bg: #f4f4f4;
+      --text: #111;
+      --muted: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+    /* header {
+      padding: 120px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    header h1 {
+      font-size: 54px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    header h2 {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 20px;
+      color: #666;
+    } */
+
+    /* Matches container alignment */
+    .intro {
+    margin-bottom: 36px;
+    }
+
+    /* Typing Base Style */
+    .typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #f4f4f4; /* OSU red cursor */
+    width: 0;
+    animation: typing 3.6s steps(40, end) forwards, blink .7s infinite;
+    }
+
+    /* Name + Title sizes */
+    .name {
+    font-size: 28px;
+    font-weight: 600;
+    }
+
+    .title {
+    font-size: 18px;
+    color: #555;
+    margin-top: 4px;
+    }
+
+    /* Typing Animation */
+    @keyframes typing {
+    to { width: 100%; }
+    }
+
+    /* Cursor Blink */
+    @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: transparent; }
+    }
+
+    /* CONTAINER */
+    .container {
+      width: min(850px, 90%);
+      margin: auto;
+      padding: 60px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* SECTION STYLING */
+    section {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.9s ease forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+    section:nth-child(5) { animation-delay: 0.5s; }
+    section:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #ddd;
+      width: fit-content;
+    }
+
+    /* LISTS */
+    ul {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .placeholder {
+      padding: 18px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .education-details {
+    margin-left: 25px; /* Indent all details */
+    }
+
+    .experience-item {
+        border: 1px solid #e0e0e0;     /* light gray border */
+        padding: 16px;
+        border-radius: 10px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: all 0.25s ease;
+        background: #fafafa;           /* subtle background */
+    }
+
+    .experience-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;          /* <-- ensures full width */
+    }
+
+    /* Hover glow + lift */
+    .experience-item:hover {
+        border-color: #b8b8ff;         /* soft blue highlight */
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Keep logos aligned */
+    .experience-logo {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    /* Role/dates text layout */
+
+    .role-dates {
+        display: flex;
+        justify-content: space-between;   /* spreads items out */
+        align-items: center;
+        width: 100%;                       /* stretches full width */
+        font-size: 17px;
+    }
+
+    .role-dates .role {
+        font-weight: 500;
+    }
+
+    .role-dates .dates {
+        color: #666;
+        font-weight: 400;
+        margin-left: auto;
+    }
+
+    .dates {
+        color: #666;
+    }
+
+    .company {
+        margin-top: 4px;
+        color: #444;
+    }
+
+    .projects-section {
+    margin-top: 40px;
+    }
+
+    .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 25px;
+    margin-top: 20px;
+    }
+
+    .project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .project-card h4 {
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    }
+
+    .project-desc {
+    margin-bottom: 15px;
+    color: #666;
+    }
+
+    .project-image {
+    width: 100%;
+    height: 140px;
+    background-color: #eee;
+    border-radius: 8px;
+    border: 1px dashed #bbb;
+    }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  .cert-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* pushes content to the bottom */
+    align-items: center;       /* centers horizontally */
+  }
+
+  .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .cert-badge {
+    width: auto;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .skills-rotator {
+    overflow: hidden;
+    height: 40px;
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .skills-track {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    animation: loopSkills 12s linear infinite;
+  }
+
+  .skills-track span {
+    font-weight: 500;
+    font-size: 18px;
+    color: #222;
+  }
+
+  /* Smooth infinite scrolling */
+  @keyframes loopSkills {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Optional: pause on hover */
+  .skills-rotator:hover .skills-track {
+    animation-play-state: paused;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+    color: #222;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+  }
+
+  .footer a:hover {
+    color: #b00000; /* accent color on hover */
+  }
+
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+</style>
+  <style>
+  .profile-left {
+  position: absolute;
+  left: 40px;           /* closer to left edge */
+  top: 140px;           /* lowered slightly */
+  width: 160px;         /* slightly larger */
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  z-index: -1;          /* sends image behind content */}
+  </style>
+</head>
+
+<body>
+
+  <!-- <img src="joshFacePic.png" alt="Joshua Photo" class="profile-left"> -->
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <div class="intro">
+    <h1 class="typing name">Joshua Joe</h1>
+    <h2 class="typing title" style="animation-delay: 1.2s;">Computer Science & Engineering Student</h2>
+    </div>
+
+    <section>
+    <h3 class="section-title">Education</h3>
+    <p><strong>The Ohio State University</strong></p>
+
+    <div class="education-details">
+        <p>Bachelor of Science (BS) in Computer Science & Engineering</p>
+        <p>Specialization: Database Systems & Data Analytics<br>
+        Minor: Business through the Fisher School of Business</p>
+        <p>Activities & Societies: Buckeye Googlers (Co-Founder), Kappa Theta Pi Professional Technology Fraternity, Ohio State Humanitarian Engineering Scholars, Malayalee Society (Treasurer)</p>
+    </div>
+    </section>
+
+    <section>
+    <h3 class="section-title">Experience</h3>
+
+    <!-- Technical Product Manager Intern -->
+    <div class="experience-item">
+        <img src="geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
+        <div class="experience-text">
+        <div class="role-dates">
+            <span class="role">Technical Product Manager Intern</span>
+            <span class="dates">Jun 2025 – Aug 2025</span>
+        </div>
+        <div class="company">GE Aerospace</div>
+        </div>
+    </div>
+
+    <!-- Cloud Engineering Intern -->
+    <div class="experience-item">
+        <img src="geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
+        <div class="experience-text">
+        <div class="role-dates">
+            <span class="role">Cloud Engineering Intern</span>
+            <span class="dates">Jun 2024 – Aug 2024</span>
+        </div>
+        <div class="company">GE Aerospace</div>
+        </div>
+    </div>
+    </section>
+
+    <section class="projects-section">
+    <h3 class="section-title">Projects</h3>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+        <h4>Buckeye Googlers</h4>
+        <p class="project-desc">Co-founded Buckeye Googlers, a student organization at The Ohio State University dedicated to teaching enterprise-level cloud computing through Google Cloud gHacks trainings.<br></p>
+        <img src="buckeye_googlers_logo.png" alt="Project Image" class="project-image">
+        </div>
+
+        <div class="project-card">
+        <h4>Nuex</h4>
+        <p class="project-desc">Our team built Neux, an AI-driven tool that instantly transforms any topic into an interactive knowledge graph, helping students visualize relationships between concepts and master subjects with clarity.</p>
+        <img src="nuex_logo.jpeg" alt="Project Image" class="project-image">
+        </div>
+
+        <div class="project-card">
+        <h4>BullBear.ai</h4>
+        <p class="project-desc">Our team of four developed an AI-powered Chrome extension that provides instant stock ticker sentiment analysis, helping investors quickly assess market news and make informed decisions.</p>
+        <img src="bullbearai_logo.png" alt="Project Image" class="project-image">
+        </div>
+
+    </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Certifications</h3>
+
+      <div class="cert-grid">
+
+        <!-- AWS -->
+        <div class="cert-card">
+          <img src="aws_clf-c02.png" class="cert-badge" alt="AWS Badge">
+          <p>AWS Certified Cloud Practitioner</p>
+        </div>
+
+        <!-- IBM -->
+        <div class="cert-card">
+          <img src="python_for_data_science_ibm.png" class="cert-badge" alt="IBM Badge">
+          <p>IBM Python Basics for Data Science</p>
+        </div>
+
+        <!-- Microsoft -->
+        <div class="cert-card">
+          <img src="msft_office.png" class="cert-badge" alt="Microsoft Badge">
+          <p>Microsoft Office Specialist (Associate)</p>
+        </div>
+
+      </div>
+  </section>
+
+  <section class="skills-section">
+    <h3 class="section-title">Technical Skills</h3>
+
+    <div class="skills-rotator">
+      <div class="skills-track">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>AWS</span>
+        <span>GCP</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="mailto:joshuajoe06@gmail.com" target="_blank">
+      <img src="email_icon.png" alt="Email" class="footer-icon"> Email
+    </a>
+    <a href="https://www.linkedin.com/in/joshua-joe-jj/" target="_blank">
+      <img src="linkedin_icon.png" alt="LinkedIn" class="footer-icon"> LinkedIn
+    </a>
+    <a href="https://github.com/joshuajoe9" target="_blank">
+      <img src="github_icon.png" alt="GitHub" class="footer-icon"> GitHub
+    </a>
+  </footer>
+  </div>
+
+</body>
+</html>
