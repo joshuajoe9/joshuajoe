@@ -162,6 +162,40 @@
         background: #fafafa;           /* subtle background */
     }
 
+  .education-card {
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin-top: 14px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .education-card:hover {
+    border-color: #BA0C2F;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .education-logo {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    object-fit: contain;
+    display: block;
+  }
+  .education-text {
+    flex: 1;
+  }
+
+  .education-details p {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
     .experience-text {
         flex: 1;
         display: flex;
@@ -313,7 +347,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-200%);
     }
   }
 
@@ -342,8 +376,16 @@
     transition: color 0.2s ease;
   }
 
-  .footer a:hover {
-    color: #b00000; /* accent color on hover */
+  @keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(8deg); }
+    50%  { transform: rotate(-8deg); }
+    75%  { transform: rotate(6deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .footer a:hover .footer-icon {
+    animation: wiggle 0.4s ease-in-out;
   }
 
   .footer-icon {
@@ -377,17 +419,25 @@
     <h2 class="typing title" style="animation-delay: 1.2s;">Computer Science & Engineering Student</h2>
     </div>
 
-    <section>
+  <section>
     <h3 class="section-title">Education</h3>
-    <p><strong>The Ohio State University</strong></p>
 
-    <div class="education-details">
-        <p>Bachelor of Science (BS) in Computer Science & Engineering</p>
-        <p>Specialization: Database Systems & Data Analytics<br>
-        Minor: Business through the Fisher School of Business</p>
-        <p>Activities & Societies: Buckeye Googlers (Co-Founder), Kappa Theta Pi Professional Technology Fraternity, Ohio State Humanitarian Engineering Scholars, Malayalee Society (Treasurer)</p>
+    <div class="education-card">
+      <img src="Ohio_State_University_seal.png" alt="OSU Seal" class="education-logo">
+      <div class="education-text">
+        <p><strong>The Ohio State University</strong></p>
+        <div class="education-details">
+          <p>Bachelor of Science (BS) in Computer Science & Engineering<br>
+          Specialization: Database Systems & Data Analytics<br>
+          Minor: Business through the Fisher School of Business</p>
+          <!-- <p>Activities & Societies: Buckeye Googlers (Co-Founder), 
+          Kappa Theta Pi Professional Technology Fraternity, 
+          Ohio State Humanitarian Engineering Scholars, 
+          Malayalee Society (Treasurer)</p> -->
+        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
     <section>
     <h3 class="section-title">Experience</h3>
@@ -457,7 +507,7 @@
         <!-- IBM -->
         <div class="cert-card">
           <img src="python_for_data_science_ibm.png" class="cert-badge" alt="IBM Badge">
-          <p>IBM Python Basics for Data Science</p>
+          <p>IBM: Python Basics for Data Science</p>
         </div>
 
         <!-- Microsoft -->
@@ -474,6 +524,30 @@
 
     <div class="skills-rotator">
       <div class="skills-track">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
@@ -488,13 +562,13 @@
 
   <footer class="footer">
     <a href="mailto:joshuajoe06@gmail.com" target="_blank">
-      <img src="email_icon.png" alt="Email" class="footer-icon"> Email
+      <img src="email_icon.png" alt="Email" class="footer-icon">
     </a>
     <a href="https://www.linkedin.com/in/joshua-joe-jj/" target="_blank">
-      <img src="linkedin_icon.png" alt="LinkedIn" class="footer-icon"> LinkedIn
+      <img src="linkedin_icon.png" alt="LinkedIn" class="footer-icon">
     </a>
     <a href="https://github.com/joshuajoe9" target="_blank">
-      <img src="github_icon.png" alt="GitHub" class="footer-icon"> GitHub
+      <img src="github_icon.png" alt="GitHub" class="footer-icon">
     </a>
   </footer>
   </div>
