@@ -299,6 +299,20 @@
     margin-top: 20px;
     }
 
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr; /* single column on mobile */
+      }
+
+      .project-card {
+        padding: 18px;
+      }
+
+      .project-image {
+        height: 180px;
+      }
+    }
+
     .project-card {
     border: 1px solid #ddd;
     padding: 20px;
@@ -329,6 +343,7 @@
     background-color: #eee;
     border-radius: 8px;
     border: 1px dashed #bbb;
+    object-fit: cover;
     }
 
   .cert-grid {
@@ -361,6 +376,7 @@
         width: auto;
         height: 80px;
         margin-bottom: 10px;
+        object-fit: contain;
     }
 
     .skills-rotator {
