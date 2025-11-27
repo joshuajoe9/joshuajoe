@@ -314,7 +314,8 @@
     }
 
     .project-card {
-    border: 1px solid #ddd;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -354,11 +355,11 @@
     }
 
     .cert-card {
-        background: #fff;
+        background: #fafafa;
         padding: 20px;
         border-radius: 10px;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         display: flex;
@@ -369,7 +370,7 @@
 
     .cert-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .cert-badge {
@@ -452,3 +453,48 @@
         object-fit: contain;
     }
 </style>
+
+/* NAVBAR */
+/* .navbar {
+  width: 100%;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.nav-links li a:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.nav-links li a.active {
+  background: #e6e6e6;
+  font-weight: 600;
+} */
