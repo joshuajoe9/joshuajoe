@@ -263,9 +263,9 @@ li {
   opacity: 0;
   margin-top: 0;
   transition: 
-    max-height 0.35s ease,
-    opacity 0.35s ease,
-    margin-top 0.35s ease;
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    margin-top 0.5s ease;
   color: #555;
   line-height: 1.55;
 }
