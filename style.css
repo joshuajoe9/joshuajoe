@@ -168,6 +168,16 @@ li {
   background: #fafafa;  
 }
 
+.experience-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease; /* temporary */
+  color: #555;
+  line-height: 1.55;
+}
+
 .education-card {
   border: 1px solid #e0e0e0;
   background: #fafafa;
