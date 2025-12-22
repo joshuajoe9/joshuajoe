@@ -440,6 +440,27 @@ li {
   object-fit: contain;
 }
 
+.resume-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#resume-form input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 250px;
+}
+
+#resume-form button {
+  padding: 0.5rem 1rem;
+}
+
+#form-msg {
+  margin-top: 0.5rem;
+  color: green;
+  font-weight: 500;
+}
+
 /* ============================================
    MOBILE RESPONSIVENESS - TABLETS & PHONES
    ============================================ */

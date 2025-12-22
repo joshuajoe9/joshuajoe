@@ -271,6 +271,16 @@
     </div>
   </section>
 
+  <section id="resume" class="resume-section">
+  <h3 class="section-title">Request My Resume</h3>
+  <p>Enter your email and I’ll send you my resume directly.</p>
+  <form id="resume-form">
+    <input type="email" id="user-email" placeholder="Your Email" required>
+    <button type="submit">Request Resume</button>
+    <p id="form-msg"></p>
+  </form>
+</section>
+
   <footer class="footer">
     <a href="mailto:joshuajoe06@gmail.com" target="_blank">
       <img src="imgs/email_icon.png" alt="Email" class="footer-icon">
@@ -283,5 +293,7 @@
     </a>
   </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="resumerequest.js" defer></script>
 </body>
 </html>
