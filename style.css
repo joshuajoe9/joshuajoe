@@ -440,6 +440,27 @@ li {
   object-fit: contain;
 }
 
+.resume-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#resume-form input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 250px;
+}
+
+#resume-form button {
+  padding: 0.5rem 1rem;
+}
+
+#form-msg {
+  margin-top: 0.5rem;
+  color: green;
+  font-weight: 500;
+}
+
 /* ============================================
    MOBILE RESPONSIVENESS - TABLETS & PHONES
    ============================================ */
@@ -755,4 +776,74 @@ li {
     width: 20px;
     height: 20px;
   }
+
+  #resume-form input {
+    margin-bottom: 0.5rem; /* adds vertical gap on mobile */
+    margin-right: 0; /* remove horizontal margin */
+  }
+}
+
+/* Resume Request Section - Apple Aesthetic */
+/* Resume Request Section - Blended Page Aesthetic */
+.resume-section {
+  padding: 2rem 2rem;
+  text-align: center;
+  background: #fafafa; /* match other cards */
+  border-radius: 12px;
+  border: 1px solid #e0e0e0; /* consistent with project/bio cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+#resume-form input {
+  padding: 0.75rem 1rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+#resume-form input:focus {
+  outline: none;
+  border-color: #b8b8ff; /* subtle accent, matches other cards */
+  box-shadow: none; /* remove Apple-style glow */
+}
+
+#resume-form button {
+  padding: 0.75rem 1.5rem;
+  background: #b8b8ff; /* subtle accent color */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#resume-form button:hover {
+  background: #9a9aff; /* slightly darker on hover */
+  transform: translateY(-1px);
+}
+
+#resume-form button:active {
+  transform: translateY(0);
+}
+
+#form-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  color: green;
 }

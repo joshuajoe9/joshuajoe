@@ -1,4 +1,4 @@
-// script.js
+// experience-animation.js
 
 // @author joshuajoe9
 
