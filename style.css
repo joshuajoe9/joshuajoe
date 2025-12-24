@@ -295,6 +295,7 @@ li {
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 20px;
+  align-items: flex-start;
 }
 
 .project-card {
@@ -304,6 +305,7 @@ li {
   border-radius: 12px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: flex-start;
 }
 
 .project-card:hover {
@@ -316,11 +318,17 @@ li {
   font-size: 19px;
   font-weight: 600;
 }
-
 .project-desc {
-  margin-bottom: 15px;
-  color: #666;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    margin-top 0.5s ease;
 }
+
 
 .project-card-link {
   display: block;
@@ -564,11 +572,23 @@ li {
   }
 
   /* Always show description on mobile (no hover needed) */
-  .experience-description {
+  .experience-description,
+  .project-desc {
     max-height: none;
     opacity: 1;
     margin-top: 10px;
+  }
+  .experience-description {
     font-size: 15px;
+  }
+
+  /* Always expand experience and project descriptions on mobile */
+  .experience-description,
+  .project-desc,
+  .project-card-inner {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
   }
 
   /* Projects grid - single column */
@@ -721,9 +741,24 @@ li {
     font-size: 14px;
   }
 
+  .experience-description,
+  .project-desc {
+    max-height: none;
+    opacity: 1;
+    margin-top: 10px;
+  }
   .experience-description {
     font-size: 14px;
     line-height: 1.6;
+  }
+
+  /* Always expand experience and project descriptions on mobile */
+  .experience-description,
+  .project-desc,
+  .project-card-inner {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
   }
 
   /* Projects */
