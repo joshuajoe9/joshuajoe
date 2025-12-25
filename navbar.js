@@ -1,4 +1,4 @@
-// script.js
+// navbar.js
 
 // @author joshuajoe9
 
