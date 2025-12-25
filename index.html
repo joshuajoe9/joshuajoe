@@ -5,10 +5,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="imgs/joshFacePic.png">
-  <title>Joshua Joe</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="image/png" href="imgs/joshFacePic.png">
+ <title>Joshua Joe</title>
 
   <!-- Apple-like font (Inter) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -19,35 +19,44 @@
 
 <body>
 
-  <!-- <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </nav> -->
+ <nav class="navbar">
+  
+   <div class="hamburger" id="hamburger">
+     <div></div>
+     <div></div>
+     <div></div>
+   </div>
+  
+   <ul class="nav-links" id="nav-links">
+     <a href="#intro" class="nav-name">Joshua Joe</a>
+     <li><a href="#education">Education</a></li>
+     <li><a href="#experience">Experience</a></li>
+     <li><a href="#projects">Projects</a></li>
+     <li><a href="#certifications">Certifications</a></li>
+     <li><a href="#skills">Skills</a></li>
+     <li><a href="#resume">Resume</a></li>
+   </ul>
+ </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
+ <!-- MAIN CONTENT -->
+ <div class="container">
 
-    <div class="intro">
-    <h1 class="typing name">Joshua Joe</h1>
-    <h2 class="typing title" style="animation-delay: 1.2s;">Computer Science Student</h2>
-    </div>
+   <div class="intro" id="top">
+     <h1 class="typing name" id="intro">Joshua Joe</h1>
+     <h2 class="typing title" style="animation-delay: 1.2s;">Computer Science Student</h2>
+   </div>
 
-  <section class="bio-section">
-    <div class="bio-card">
-      <img src="imgs/joshFacePic.png" alt="Joshua Joe" class="bio-photo">
-      <div class="bio-text">
-        <p>Undergraduate computer science & engineering student at The Ohio State University interested in software engineering, data science, AI, and how tech is impacting business. Industry experience in areas including cloud engineering and product management.</p>
-      </div>
-    </div>
-  </section>
+ <section class="bio-section">
+   <div class="bio-card">
+     <img src="imgs/joshFacePic.png" alt="Joshua Joe" class="bio-photo">
+     <div class="bio-text">
+       <p>Undergraduate computer science & engineering student at The Ohio State University interested in software engineering, data science, AI, and how tech is impacting business. Industry experience in areas including cloud engineering and product management.</p>
+     </div>
+   </div>
+ </section>
 
-  <section>
-    <h3 id="education" class="section-title">Education</h3>
+ <section id="education">
+   <h3 class="section-title">Education</h3>
 
     <div class="education-card">
       <img src="imgs/Ohio_State_University_seal.png" alt="OSU Seal" class="education-logo">
@@ -66,38 +75,38 @@
     </div>
   </section>
 
-    <section>
-    <h3 id="experience" class="section-title">Experience</h3>
+   <section id="experience">
+   <h3 class="section-title">Experience</h3>
 
-    <!-- Technical Product Manager Intern -->
-    <div class="experience-item">
-        <img src="imgs/geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
-        <div class="experience-text">
-        <div class="role-dates">
-            <span class="role">Technical Product Manager Intern</span>
-            <span class="dates">Jun 2025 – Aug 2025</span>
-        </div>
-        <div class="company">GE Aerospace</div>
-        <p class="experience-description">As a Technical Product Manager intern at GE Aerospace, I worked within the Supply Chain organization of GE’s classified R&D defense unit, Edison Works. I collaborated across multiple teams to streamline documentation and resources by developing SharePoint pages that centralized ERP and Edison Works DT materials, improving accessibility for four subteams and over 60 users. Additionally, I configured CyberArk IAM access and led IT migration efforts, supporting more than 25 consultants from PwC and Dassian, gaining valuable experience in cross-functional coordination and enterprise IT processes. I also had the pleasure of meeting and learning from 30+ talented developers, managers, and executives in areas including Data Science, Cloud Infrastructure, and Technical Management.</p>
-        </div>
-    </div>
+   <!-- Technical Product Manager Intern -->
+   <div class="experience-item">
+       <img src="imgs/geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
+       <div class="experience-text">
+       <div class="role-dates">
+           <span class="role">Technical Product Manager Intern</span>
+           <span class="dates">Jun 2025 – Aug 2025</span>
+       </div>
+       <div class="company">GE Aerospace</div>
+       <p class="experience-description">As a Technical Product Manager intern at GE Aerospace, I worked within the Supply Chain organization of GE’s classified R&D defense unit, Edison Works. I collaborated across multiple teams to streamline documentation and resources by developing SharePoint pages that centralized ERP and Edison Works DT materials, improving accessibility for four subteams and over 60 users. Additionally, I configured CyberArk IAM access and led IT migration efforts, supporting more than 25 consultants from PwC and Dassian, gaining valuable experience in cross-functional coordination and enterprise IT processes. I also had the pleasure of meeting and learning from 30+ talented developers, managers, and executives in areas including Data Science, Cloud Infrastructure, and Technical Management.</p>
+       </div>
+   </div>
 
-    <!-- Cloud Engineering Intern -->
-    <div class="experience-item">
-        <img src="imgs/geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
-        <div class="experience-text">
-        <div class="role-dates">
-            <span class="role">Cloud Engineering Intern</span>
-            <span class="dates">Jun 2024 – Aug 2024</span>
-        </div>
-        <div class="company">GE Aerospace</div>
-        <p class="experience-description">As a Cloud Engineering Intern, I contributed to the team’s effort to migrate on-premises servers to AWS as part of a two-year DTE modernization initiative. I set up and managed CloudWatch alarms for EC2 and EFS to monitor CPU, I/O, and workload thresholds, ensuring system reliability. This internship provided hands-on experience with AWS cloud services while reinforcing a strong theoretical foundation in cloud infrastructure and system monitoring.</p>
-        </div>
-    </div>
-    </section>
+   <!-- Cloud Engineering Intern -->
+   <div class="experience-item">
+       <img src="imgs/geAerospaceLogo.png" alt="GE Aerospace Logo" class="experience-logo">
+       <div class="experience-text">
+       <div class="role-dates">
+           <span class="role">Cloud Engineering Intern</span>
+           <span class="dates">Jun 2024 – Aug 2024</span>
+       </div>
+       <div class="company">GE Aerospace</div>
+       <p class="experience-description">As a Cloud Engineering Intern, I contributed to the team’s effort to migrate on-premises servers to AWS as part of a two-year DTE modernization initiative. I set up and managed CloudWatch alarms for EC2 and EFS to monitor CPU, I/O, and workload thresholds, ensuring system reliability. This internship provided hands-on experience with AWS cloud services while reinforcing a strong theoretical foundation in cloud infrastructure and system monitoring.</p>
+       </div>
+   </div>
+   </section>
 
-    <section class="projects-section">
-    <h3 id="projects" class="section-title">Projects</h3>
+  <section id="projects" class="projects-section">
+    <h3 class="section-title">Projects</h3>
 
     <div class="projects-grid">
         <div class="project-card">
@@ -131,138 +140,138 @@
         </div>
 
     </div>
-    </section>
-
-    <section>
-      <h3 id="certifications" class="section-title">Certifications</h3>
-
-      <div class="cert-grid">
-
-        <!-- AWS -->
-        <div class="cert-card">
-          <img src="imgs/aws_clf-c02.png" class="cert-badge" alt="AWS Badge">
-          <p>AWS Certified Cloud Practitioner</p>
-        </div>
-
-        <!-- IBM -->
-        <div class="cert-card">
-          <img src="imgs/python_for_data_science_ibm.png" class="cert-badge" alt="IBM Badge">
-          <p>IBM: Python Basics for Data Science</p>
-        </div>
-
-        <!-- Microsoft -->
-        <div class="cert-card">
-          <img src="imgs/msft_office.png" class="cert-badge" alt="Microsoft Badge">
-          <p>Microsoft Office Specialist (Associate)</p>
-        </div>
-
-      </div>
   </section>
 
-  <section class="skills-section">
-    <h3 id="skills" class="section-title">Technical Skills</h3>
+   <section id="certifications">
+     <h3 class="section-title">Certifications</h3>
 
-    <div class="skills-rotator">
-      <div class="skills-track">
-        <!-- First set -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
-        
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
-        
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+     <div class="cert-grid">
 
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+       <!-- AWS -->
+       <div class="cert-card">
+         <img src="imgs/aws_clf-c02.png" class="cert-badge" alt="AWS Badge">
+         <p>AWS Certified Cloud Practitioner</p>
+       </div>
 
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+       <!-- IBM -->
+       <div class="cert-card">
+         <img src="imgs/python_for_data_science_ibm.png" class="cert-badge" alt="IBM Badge">
+         <p>IBM: Python Basics for Data Science</p>
+       </div>
 
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
-        
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+       <!-- Microsoft -->
+       <div class="cert-card">
+         <img src="imgs/msft_office.png" class="cert-badge" alt="Microsoft Badge">
+         <p>Microsoft Office Specialist (Associate)</p>
+       </div>
 
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+     </div>
+ </section>
 
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
-        
-        <!-- Duplicate for seamless loop -->
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>SQL</span>
-        <span>AWS</span>
-        <span>GCP</span>
+ <section id="skills" class="skills-section">
+   <h3 class="section-title">Technical Skills</h3>
+
+   <div class="skills-rotator">
+     <div class="skills-track">
+       <!-- First set -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+      
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+      
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+      
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
+      
+       <!-- Duplicate for seamless loop -->
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>Java</span>
+       <span>Python</span>
+       <span>SQL</span>
+       <span>AWS</span>
+       <span>GCP</span>
 
         <!-- Duplicate for seamless loop -->
         <span>HTML</span>
@@ -302,6 +311,8 @@
     <p>© 2025 Joshua Joe. All rights reserved</p>
   </footer>
   </div>
+  <script src="navbar.js"></script>
+  <script src="mobile-navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="resume-request.js" defer></script>
 </body>
