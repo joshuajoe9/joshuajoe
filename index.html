@@ -10,9 +10,11 @@
  <link rel="icon" type="image/png" href="imgs/joshFacePic.png">
  <title>Joshua Joe</title>
 
- <!-- Apple-like font (Inter) -->
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
+  <!-- Apple-like font (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="expand-on-hover.js" defer></script>
 </head>
 
 <body>
@@ -56,22 +58,22 @@
  <section id="education">
    <h3 class="section-title">Education</h3>
 
-   <div class="education-card">
-     <img src="imgs/Ohio_State_University_seal.png" alt="OSU Seal" class="education-logo">
-     <div class="education-text">
-       <p><strong>The Ohio State University</strong></p>
-       <div class="education-details">
-         <p>Bachelor of Science (BS) in Computer Science & Engineering<br>
-         Specialization: Database Systems & Data Analytics<br>
-         Minor: Business through the Fisher School of Business</p>
-         <!-- <p>Activities & Societies: Buckeye Googlers (Co-Founder),
-         Kappa Theta Pi Professional Technology Fraternity,
-         Ohio State Humanitarian Engineering Scholars,
-         Malayalee Society (Treasurer)</p> -->
-       </div>
-     </div>
-   </div>
- </section>
+    <div class="education-card">
+      <img src="imgs/Ohio_State_University_seal.png" alt="OSU Seal" class="education-logo">
+      <div class="education-text">
+        <p><strong>The Ohio State University</strong></p>
+        <div class="education-details">
+          <p>Bachelor of Science (BS) in Computer Science & Engineering<br>
+          Specialization: Database Systems & Data Analytics<br>
+          Minor: Business <i>(Fisher School of Business)</i></p>
+          <!-- <p>Activities & Societies: Buckeye Googlers (Co-Founder), 
+          Kappa Theta Pi Professional Technology Fraternity, 
+          Ohio State Humanitarian Engineering Scholars, 
+          Malayalee Society (Treasurer)</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
 
    <section id="experience">
    <h3 class="section-title">Experience</h3>
@@ -106,30 +108,36 @@
    <section id="projects" class="projects-section">
    <h3 class="section-title">Projects</h3>
 
-   <div class="projects-grid">
-       <div class="project-card">
-       <h4>Buckeye Googlers</h4>
-       <p class="project-desc">Co-founded Buckeye Googlers, a student organization at The Ohio State University dedicated to teaching enterprise-level cloud computing through Google Cloud gHacks trainings.<br></p>
-       <a href="https://www.linkedin.com/company/buckeye-googlers" target="_blank" class="project-card-link">
-         <img src="imgs/buckeye_googlers_logo.png" alt="Project Image" class="project-image">
-       </a>
-       </div>
+    <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-card-inner">
+            <h4>Buckeye Googlers</h4>
+            <p class="project-desc">Co-founded Buckeye Googlers, a student organization at The Ohio State University dedicated to teaching enterprise-level cloud computing through Google Cloud gHacks trainings.<br></p>
+            <a href="https://www.linkedin.com/company/buckeye-googlers" target="_blank" class="project-card-link">
+              <img src="imgs/buckeye_googlers_logo.png" alt="Project Image" class="project-image">
+            </a>
+          </div>
+        </div>
 
-       <div class="project-card">
-       <h4>Nuex</h4>
-       <p class="project-desc">Our team built Neux, an AI-driven tool that instantly transforms any topic into an interactive knowledge graph, helping students visualize relationships between concepts and master subjects with clarity.</p>
-       <a href="https://github.com/MystxcHD/neux-hackathon" target="_blank" class="project-card-link">
-         <img src="imgs/nuex_logo.jpeg" alt="Project Image" class="project-image">
-       </a>
-       </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <h4>Nuex</h4>
+            <p class="project-desc">Our team built Neux, an AI-driven tool that instantly transforms any topic into an interactive knowledge graph, helping students visualize relationships between concepts and master subjects with clarity.</p>
+            <a href="https://github.com/MystxcHD/neux-hackathon" target="_blank" class="project-card-link">
+              <img src="imgs/nuex_logo.jpeg" alt="Project Image" class="project-image">
+            </a>
+          </div>
+        </div>
 
-       <div class="project-card">
-       <h4>BullBear.ai</h4>
-       <p class="project-desc">Our team of four developed an AI-powered Chrome extension that provides instant stock ticker sentiment analysis, helping investors quickly assess market news and make informed decisions.</p>
-       <a href="https://github.com/MystxcHD/bullbear" target="_blank" class="project-card-link">
-         <img src="imgs/bullbearai_logo.png" alt="Project Image" class="project-image">
-       </a>
-     </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <h4>BullBear.ai</h4>
+            <p class="project-desc">Our team of four developed an AI-powered Chrome extension that provides instant stock ticker sentiment analysis, helping investors quickly assess market news and make informed decisions.</p>
+            <a href="https://github.com/MystxcHD/bullbear" target="_blank" class="project-card-link">
+              <img src="imgs/bullbearai_logo.png" alt="Project Image" class="project-image">
+            </a>
+          </div>
+        </div>
 
    </div>
    </section>
@@ -265,34 +273,45 @@
        <span>AWS</span>
        <span>GCP</span>
 
-       <!-- Duplicate for seamless loop -->
-       <span>HTML</span>
-       <span>CSS</span>
-       <span>JavaScript</span>
-       <span>Java</span>
-       <span>Python</span>
-       <span>SQL</span>
-       <span>AWS</span>
-       <span>GCP</span>
-     </div>
-   </div>
- </section>
+        <!-- Duplicate for seamless loop -->
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>AWS</span>
+        <span>GCP</span>
+      </div>
+    </div>
+  </section>
 
- <footer class="footer">
-   <a href="mailto:joshuajoe06@gmail.com" target="_blank">
-     <img src="imgs/email_icon.png" alt="Email" class="footer-icon">
-   </a>
-   <a href="https://www.linkedin.com/in/joshua-joe-jj/" target="_blank">
-     <img src="imgs/linkedin_icon.png" alt="LinkedIn" class="footer-icon">
-   </a>
-   <a href="https://github.com/joshuajoe9" target="_blank">
-     <img src="imgs/github_icon.png" alt="GitHub" class="footer-icon">
-   </a>
- </footer>
- </div>
- 
-</div>
-<script src="navbar.js"></script>
-<script src="mobile-navbar.js"></script>
+  <section id="resume" class="resume-section">
+  <h3 class="section-title">Request My Resume</h3>
+  <p>Enter your email and I’ll send you my resume directly.</p>
+  <form id="resume-form">
+    <input type="email" id="user-email" placeholder="Your Email" required>
+    <button type="submit">Request Resume</button>
+    <p id="form-msg"></p>
+  </form>
+</section>
+
+  <footer class="footer">
+    <div class = footer-links>
+      <a href="mailto:joshuajoe06@gmail.com" target="_blank">
+        <img src="imgs/email_icon.png" alt="Email" class="footer-icon">
+      </a>
+      <a href="https://www.linkedin.com/in/joshua-joe-jj/" target="_blank">
+        <img src="imgs/linkedin_icon.png" alt="LinkedIn" class="footer-icon">
+      </a>
+      <a href="https://github.com/joshuajoe9" target="_blank">
+        <img src="imgs/github_icon.png" alt="GitHub" class="footer-icon">
+      </a>
+      </div>
+    <p>© 2025 Joshua Joe. All rights reserved</p>
+  </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="resume-request.js" defer></script>
 </body>
 </html>

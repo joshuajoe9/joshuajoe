@@ -244,6 +244,16 @@ li {
  background: #fafafa; 
 }
 
+.experience-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease; /* temporary */
+  color: #555;
+  line-height: 1.55;
+}
+
 .education-card {
  border: 1px solid #e0e0e0;
  background: #fafafa;
@@ -357,19 +367,21 @@ li {
 }
 
 .projects-grid {
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- gap: 25px;
- margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+  align-items: flex-start;
 }
 
 .project-card {
- background: #fafafa;
- border: 1px solid #e0e0e0;
- padding: 20px;
- border-radius: 12px;
- text-align: center;
- transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: flex-start;
 }
 
 .project-card:hover {
@@ -382,11 +394,17 @@ li {
  font-size: 19px;
  font-weight: 600;
 }
-
 .project-desc {
- margin-bottom: 15px;
- color: #666;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    margin-top 0.5s ease;
 }
+
 
 .project-card-link {
  display: block;
@@ -468,24 +486,59 @@ li {
  animation-play-state: paused;
 }
 
+/* Footer container */
+/* Footer container */
 .footer {
- display: flex;
- justify-content: center;
- gap: 25px;
- margin-top: 60px;
- padding-top: 20px;
- border-top: 1px solid #ddd;
- font-size: 16px;
- color: #222;
+  background-color: var(--bg) !important; /* override any other backgrounds */
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  color: var(--text);
+}
+
+/* Container for the social icons */
+.footer-links {
+  background-color: transparent !important; /* ensure container doesn’t inherit card color */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* Container for the social icons */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
 }
 
 .footer a {
- text-decoration: none;
- color: inherit;
- display: flex;
- align-items: center;
- gap: 8px;
- transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Icon hover effect */
+.footer a:hover .footer-icon {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Footer icons */
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Copyright text */
+.footer p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
 }
 
 @keyframes wiggle {
@@ -504,6 +557,27 @@ li {
  width: 24px;
  height: 24px;
  object-fit: contain;
+}
+
+.resume-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#resume-form input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 250px;
+}
+
+#resume-form button {
+  padding: 0.5rem 1rem;
+}
+
+#form-msg {
+  margin-top: 0.5rem;
+  color: green;
+  font-weight: 500;
 }
 
 /* ============================================
@@ -608,13 +682,25 @@ li {
    margin-left: 0;
  }
 
- /* Always show description on mobile (no hover needed) */
- .experience-description {
-   max-height: none;
-   opacity: 1;
-   margin-top: 10px;
-   font-size: 15px;
- }
+  /* Always show description on mobile (no hover needed) */
+  .experience-description,
+  .project-desc {
+    max-height: none;
+    opacity: 1;
+    margin-top: 10px;
+  }
+  .experience-description {
+    font-size: 15px;
+  }
+
+  /* Always expand experience and project descriptions on mobile */
+  .experience-description,
+  .project-desc,
+  .project-card-inner {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
+  }
 
  /* Projects grid - single column */
  .projects-grid {
@@ -776,10 +862,25 @@ li {
    font-size: 14px;
  }
 
- .experience-description {
-   font-size: 14px;
-   line-height: 1.6;
- }
+  .experience-description,
+  .project-desc {
+    max-height: none;
+    opacity: 1;
+    margin-top: 10px;
+  }
+  .experience-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Always expand experience and project descriptions on mobile */
+  .experience-description,
+  .project-desc,
+  .project-card-inner {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
+  }
 
  /* Projects */
  .project-card {
@@ -827,10 +928,80 @@ li {
    gap: 18px;
  }
 
- .footer-icon {
-   width: 20px;
-   height: 20px;
- }
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #resume-form input {
+    margin-bottom: 0.5rem; /* adds vertical gap on mobile */
+    margin-right: 0; /* remove horizontal margin */
+  }
+}
+
+/* Resume Request Section - Apple Aesthetic */
+/* Resume Request Section - Blended Page Aesthetic */
+.resume-section {
+  padding: 2rem 2rem;
+  text-align: center;
+  background: #fafafa; /* match other cards */
+  border-radius: 12px;
+  border: 1px solid #e0e0e0; /* consistent with project/bio cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+#resume-form input {
+  padding: 0.75rem 1rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+#resume-form input:focus {
+  outline: none;
+  border-color: #b8b8ff; /* subtle accent, matches other cards */
+  box-shadow: none; /* remove Apple-style glow */
+}
+
+#resume-form button {
+  padding: 0.75rem 1.5rem;
+  background: #b8b8ff; /* subtle accent color */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#resume-form button:hover {
+  background: #9a9aff; /* slightly darker on hover */
+  transform: translateY(-1px);
+}
+
+#resume-form button:active {
+  transform: translateY(0);
+}
+
+#form-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  color: green;
 }
 
 /* ================================
@@ -901,4 +1072,74 @@ li {
   .nav-links.active::before {
     display: none;
   }
+
+  #resume-form input {
+    margin-bottom: 0.5rem; /* adds vertical gap on mobile */
+    margin-right: 0; /* remove horizontal margin */
+  }
+}
+
+/* Resume Request Section - Apple Aesthetic */
+/* Resume Request Section - Blended Page Aesthetic */
+.resume-section {
+  padding: 2rem 2rem;
+  text-align: center;
+  background: #fafafa; /* match other cards */
+  border-radius: 12px;
+  border: 1px solid #e0e0e0; /* consistent with project/bio cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+#resume-form input {
+  padding: 0.75rem 1rem;
+  margin-right: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+#resume-form input:focus {
+  outline: none;
+  border-color: #b8b8ff; /* subtle accent, matches other cards */
+  box-shadow: none; /* remove Apple-style glow */
+}
+
+#resume-form button {
+  padding: 0.75rem 1.5rem;
+  background: #b8b8ff; /* subtle accent color */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#resume-form button:hover {
+  background: #9a9aff; /* slightly darker on hover */
+  transform: translateY(-1px);
+}
+
+#resume-form button:active {
+  transform: translateY(0);
+}
+
+#form-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  color: green;
 }
