@@ -242,6 +242,22 @@ li {
  gap: 15px;
  transition: all 0.25s ease;
  background: #fafafa; 
+ cursor: pointer;
+ position: relative;
+}
+
+.experience-item::after {
+  content: "hover to expand";
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 11px;
+  color: #999;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.experience-item:hover::after {
+  opacity: 0;
 }
 
 .experience-description {
@@ -299,7 +315,7 @@ li {
 
 /* Hover glow + lift */
 .experience-item:hover {
- border-color: #b8b8ff;
+ border-color: #6c6cff;
  transform: translateY(-3px);
  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -375,16 +391,33 @@ li {
 }
 
 .project-card {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  align-self: flex-start;
+ background: #fafafa;
+ border: 1px solid #e0e0e0;
+ padding: 20px;
+ border-radius: 12px;
+ text-align: center;
+ transition: transform 0.2s ease, box-shadow 0.2s ease;
+ align-self: flex-start;
+ cursor: pointer;
+ position: relative;
+}
+
+.project-card::after {
+  content: "hover for details";
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 11px;
+  color: #999;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.project-card:hover::after {
+  opacity: 0;
 }
 
 .project-card:hover {
+ border-color: #6c6cff;
  transform: translateY(-4px);
  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
