@@ -260,6 +260,12 @@ li {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+  .experience-item::after {
+    display: none;
+  }
+}
+
 .experience-description {
   max-height: 0;
   overflow: hidden;
@@ -414,6 +420,12 @@ li {
 }
 .project-card:hover::after {
   opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .project-card::after {
+    display: none;
+  }
 }
 
 .project-card:hover {
