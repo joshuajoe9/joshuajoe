@@ -319,9 +319,12 @@
         <img src="imgs/github_icon.png" alt="GitHub" class="footer-icon">
       </a>
       </div>
-    <p>© 2026 Joshua Joe. All rights reserved.</p>
+      <p>© <span id="year"></span> Joshua Joe. All rights reserved.</p>
   </footer>
   </div>
+  <script> // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="navbar.js"></script>
   <script src="mobile-navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
